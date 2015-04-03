@@ -1,3 +1,11 @@
+Peter Chan
+A00900269
+Set 4B
+Lab 8
+Completed with custom menu
+
+
+
 ######################################
 Lab 8 Starter Project - Authentication
 ######################################
