@@ -16,13 +16,9 @@ class Auth extends Application{
         $this->data['pagebody'] = 'login';
         $this->render();
     }
-    
+    // authenticates login and saves sesson info
     function submit(){
         $key = $_POST['userid'];
-        //echo var_dump($key);die();
-        //echo var_dump($_POST['password']);die();
-        //$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        //echo var_dump($password);die();
         $user = $this->users->get($key);
         if(password_verify($this->input->post('password'), $user->password)){
             $this->session->set_userdata('userID', $key);
@@ -32,6 +28,7 @@ class Auth extends Application{
         redirect('/');
     }
     
+    // logout by destroying session
     function logout(){
         $this->session->sess_destroy();
         redirect('/');

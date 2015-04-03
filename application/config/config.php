@@ -4,6 +4,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 // the menu basics (text navbar)
+//Not used anymore
 $config['menu_choices'] = array(
     'menudata' => array(
 	array('name' => "Alpha", 'link' => '/alpha'),

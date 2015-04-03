@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of Users
+ * Constructs the user object from secrets db users table
  *
  * @author Peter
  */
