@@ -77,30 +77,24 @@ class Application extends CI_Controller {
         $gamma = array('name' => "Gamma", 'link' => '/gamma');
         $menu['menubar'] = $alpha;
 
+        // if not logged in
         if($userRole === null){
             $menu[] = $login;
         }
+        // if logged in as user
         if($userRole === ROLE_USER){
             $menu[] = $beta;
             $menu[] = $logout;
         }
+        // if logged in as admin
         if($userRole === ROLE_ADMIN){
             $menu[] = $beta;
             $menu[] = $gamma;
             $menu[] = $logout;
         }
-        //echo var_dump($menu);die();
+
         return $menu;
-                //$this->data['customer'] = $this->order->customer();
-        //$this->parser->parse('_menubar', $this->config->item('menu_choices'),true);
-        //$this->data['menudata'] = $menu;
-        /*array(
-	array('name' => "Alpha", 'link' => '/alpha'),
-	array('name' => "Beta", 'link' => '/beta'),
-	array('name' => "Gamma", 'link' => '/gamma'),
-        array('name' => "Login", 'link' => '/auth'),
-        array('name' => "Logout", 'link' => '/auth/logout'),
-        )*/
+
     }
 
 }
