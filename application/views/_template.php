@@ -25,7 +25,7 @@ if (!defined('APPPATH'))
                 <div class="navbar-inner">
                     <a class="brand" href="/"><img src="/assets/images/logo.png"/></a>
                     {menubar}
-                    // added to generate the links since not using parser
+                    <!--added to generate the links since not using parser-->
                     <a href="{link}">{name}</a>
                     {/menubar}
 		</div>
